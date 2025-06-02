@@ -5,6 +5,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/mode-toggle";
+import { LoginModal } from "@/components/auth/login-modal";
+import { RegisterModal } from "@/components/auth/register-modal";
 import { NAVBAR_LINKS, SITE_NAME } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { 
@@ -72,14 +74,8 @@ export function Navbar() {
         <div className="flex items-center gap-4">
           <div className="hidden md:flex items-center gap-4">
             <ModeToggle />
-            <Button variant="outline" size="sm">
-              <LogIn className="mr-2 h-4 w-4" />
-              Log In
-            </Button>
-            <Button size="sm">
-              <User className="mr-2 h-4 w-4" />
-              Sign Up
-            </Button>
+            <LoginModal />
+            <RegisterModal />
           </div>
           
           {/* Mobile Navigation */}
@@ -120,14 +116,8 @@ export function Navbar() {
                     ))}
                   </nav>
                   <div className="mt-auto space-y-4">
-                    <Button variant="outline" className="w-full">
-                      <LogIn className="mr-2 h-4 w-4" />
-                      Log In
-                    </Button>
-                    <Button className="w-full">
-                      <User className="mr-2 h-4 w-4" />
-                      Sign Up
-                    </Button>
+                    <LoginModal />
+                    <RegisterModal />
                   </div>
                 </div>
               </SheetContent>
