@@ -4,9 +4,7 @@ export const SITE_DESCRIPTION = "Premium Prepaid Cards for Every Need";
 export const NAVBAR_LINKS = [
   { label: "Home", href: "/" },
   { label: "Cards", href: "/cards" },
-  { label: "Pricing", href: "/pricing" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
+  { label: "Support", href: "/support" },
 ];
 
 export const CARD_DATA = [
